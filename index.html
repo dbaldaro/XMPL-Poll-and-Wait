@@ -1,0 +1,26 @@
+<html ng-app="xmp.app" >
+    <head>
+        <!-- XMPie XMPL library -->
+        <link href="https://ajax.xmcircle.com/ajax/libs/xmpl/3.1/xmp/css/xmp.css" rel="stylesheet" media="screen">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="https://ajax.xmcircle.com/ajax/libs/xmpl/3.1/xmp/js/xmp.min.js"></script>
+        <script src="./xmpcfg.js"></script>
+
+        <!-- Call in the external js that will do the good stuff -->
+        <script src="./js/pollandwait.js"></script>
+
+    </head>
+    <!-- Set up the XMPL controller and trigger the External TouchPoint X1 on loading of the page. -->
+    <body   ng-controller="XMPPersonalizedPage" 
+            xmp-cloak
+            xmp-clear-all-cookies-onload
+            xmp-tracking-page-name="Landing"
+            xmp-success-trigger="X4">
+       
+        <div>Welcome {{xmp.r.FirstName}}, please wait while we create your coupon.</div>
+        <div id="status"></div>
+        <div style="display: none;" id="error">
+            <p>Ah, shoot something went wrong!</p>
+        </div>
+    </body>
+</html>
